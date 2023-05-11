@@ -8,6 +8,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <algorithm>
 using namespace std;
 
 void testInput(string test) {
@@ -41,16 +42,27 @@ int main() {
     while (getline(inputF, line)) {
         
         string scannedLine;
+        int symbolLocation = 0;
+        string emailHandle;
         
         for (int i = 0; i < line.length(); i++) {
-            if (line[i] == ' ') {
+            if (line[i] != '@') {
                 scannedLine += line[i];
+                symbolLocation++;
             } else {
-                testInput(scannedLine);
-                cout << "Found a space! Ending for now" << endl;
-                return 0;
+                break;
             }
         }
+        
+        for (int j = symbolLocation; scannedLine[j] != ' '; j--) {
+            emailHandle += scannedLine[j];
+        }
+        
+        reverse(emailHandle.begin(), emailHandle.end());
+         
+        cout << "This is scanned line: " << scannedLine << endl;
+        cout << "Symbol Location: " << symbolLocation << endl;
+        cout << "Email Handle: " << emailHandle << "@dvc.edu" << endl;
         
     }
 }

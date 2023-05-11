@@ -25,7 +25,7 @@
 /* Begin PBXFileReference section */
 		0ECDA1972A0CB4F30020607F /* email */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = email; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ECDA19A2A0CB4F30020607F /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		0ECDA1A22A0CB9580020607F /* testEmail.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = testEmail.txt; path = "/Users/anferneeviduya/Desktop/CS SP23/email/email/../../../../Library/Developer/Xcode/DerivedData/email-dykpjkjnebxnxdgvpwfhzjjsozcu/Build/Products/Debug/testEmail.txt"; sourceTree = "<absolute>"; };
+		0ECDA1A22A0CB9580020607F /* testEmail.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = testEmail.txt; path = "/Users/anferneeviduya/Library/Developer/Xcode/DerivedData/email-dykpjkjnebxnxdgvpwfhzjjsozcu/Build/Products/Debug/testEmail.txt"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
