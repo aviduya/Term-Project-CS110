@@ -11,11 +11,35 @@
 #include <algorithm>
 using namespace std;
 
-void testInput(string test) {
-    cout << "Test Input: " <<test << endl;
+string emailDetector(string line) {
+    int symbolLocation = 0;
+    string handle;
+    string address;
+    
+    for (int i = 0; i <= line.length(); i++) {
+        if (line[i] != '@') {
+            symbolLocation++;
+        } else {
+            break;
+        }
+    }
+    
+    for (int j = symbolLocation; line[j] != ' '; j--) {
+        handle += line[j];
+    }
+    
+    for (int k = symbolLocation + 1; line[k] != ' '; k++) {
+        address += line[k];
+    }
+    
+    reverse(handle.begin(), handle.end());
+    
+    return handle + address;
 }
 
 int main() {
+    
+    string emailArray[2];
     
     // MARK: Create Variables for Files & Ask for the file location and name
     
@@ -41,29 +65,14 @@ int main() {
     
     while (getline(inputF, line)) {
         
-        string scannedLine;
-        int symbolLocation = 0;
-        string emailHandle;
-        
-        for (int i = 0; i < line.length(); i++) {
-            if (line[i] != '@') {
-                scannedLine += line[i];
-                symbolLocation++;
-            } else {
-                break;
-            }
+        if (line.find('@') == string::npos) {
+            continue;
         }
         
-        for (int j = symbolLocation; scannedLine[j] != ' '; j--) {
-            emailHandle += scannedLine[j];
-        }
-        
-        reverse(emailHandle.begin(), emailHandle.end());
-         
-        cout << "This is scanned line: " << scannedLine << endl;
-        cout << "Symbol Location: " << symbolLocation << endl;
-        cout << "Email Handle: " << emailHandle << "@dvc.edu" << endl;
+        cout << emailDetector(line) << endl;
+
         
     }
+   
 }
 
