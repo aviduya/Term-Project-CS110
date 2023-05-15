@@ -39,8 +39,6 @@ string emailDetector(string line) {
 
 int main() {
     
-    string emailArray[2];
-    
     // MARK: Create Variables for Files & Ask for the file location and name
     
     string inputFileName = "testEmail.txt";
@@ -62,16 +60,24 @@ int main() {
     // MARK: Read the file contents
     
     string line;
+    string emailArray[1000];
+    int indexOfArray = 0;
     
     while (getline(inputF, line)) {
+    
         
         if (line.find('@') == string::npos) {
             continue;
         }
         
-        cout << emailDetector(line) << endl;
-
+        string email = emailDetector(line);
+        emailArray[indexOfArray] = email;
+        indexOfArray++;
         
+    }
+    
+    for (int i = 0; i < indexOfArray; i++) {
+        cout << "Emails: " << emailArray[i] << endl;
     }
    
 }
