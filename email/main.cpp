@@ -11,6 +11,18 @@
 #include <algorithm>
 using namespace std;
 
+
+void writeToFile(string fileName, string emails[1000], int size) {
+    ofstream file(fileName);
+    
+    for (int i = 0; i < size; i++) {
+        file << emails[i] << "\n";
+    }
+ 
+    file.close();
+    
+}
+
 string emailDetector(string line) {
     int symbolLocation = 0;
     string handle;
@@ -76,9 +88,7 @@ int main() {
         
     }
     
-    for (int i = 0; i < indexOfArray; i++) {
-        cout << "Emails: " << emailArray[i] << endl;
-    }
+    writeToFile("testOutputEmail", emailArray, indexOfArray);
    
 }
 
