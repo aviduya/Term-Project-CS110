@@ -9,7 +9,7 @@ using namespace std;
 #ifndef email_functions_h
 #define email_functions_h
 
-void writeToFile(string fileName, string emails[1000], int size);
+void writeToFile(string fileName, const set<string>& emails);
 string emailEngine(string line);
 
 

@@ -1,22 +1,15 @@
-//
-//  email_functions.cpp
-//  email
-//
-//  Created by Anfernee Viduya on 5/15/23.
-//
-
 #include <iostream>
 #include <fstream>
 #include <string>
 #include <algorithm>
-#include "email_functions.h"
+#include <set>
 using namespace std;
 
-void writeToFile(string fileName, string emails[1000], int size) {
+void writeToFile(string fileName, const set<string>& emails) {
     ofstream file(fileName);
     
-    for (int i = 0; i < size; i++) {
-        file << emails[i] << "\n";
+    for (const auto& email : emails) {
+        file << email << "; ";
     }
  
     file.close();

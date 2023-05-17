@@ -1,14 +1,8 @@
-//
-//  main.cpp
-//  email
-//
-//  Created by Anfernee Viduya on 5/10/23.
-//
-
 #include <iostream>
 #include <fstream>
 #include <string>
 #include <algorithm>
+#include <set>
 #include "email_functions.h"
 using namespace std;
 
@@ -20,13 +14,12 @@ int main() {
     fstream inputF(inputFileName);
     
     if (!inputF.good()) {
-        cerr << "Could not find the file." << endl;
-        main();
+        cerr << "Could not find the file " << "[" << inputFileName << "]" << endl;
+        return 1;
     }
     
     string line;
-    string emailArray[1000];
-    int indexOfArray = 0;
+    set<string> emailSet;
     
     while (getline(inputF, line)) {
     
@@ -36,12 +29,10 @@ int main() {
         }
         
         string email = emailEngine(line);
-        emailArray[indexOfArray] = email;
-        indexOfArray++;
+        emailSet.insert(email);
         
     }
     
-    writeToFile("testOutputEmail", emailArray, indexOfArray);
+    writeToFile("testOutputEmail", emailSet);
    
 }
-
