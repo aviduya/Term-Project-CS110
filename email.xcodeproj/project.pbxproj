@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0ECDA19B2A0CB4F30020607F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0ECDA19A2A0CB4F30020607F /* main.cpp */; };
+		0ECDA1A62A1219680020607F /* email_functions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0ECDA1A52A1219680020607F /* email_functions.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,7 +26,9 @@
 /* Begin PBXFileReference section */
 		0ECDA1972A0CB4F30020607F /* email */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = email; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ECDA19A2A0CB4F30020607F /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		0ECDA1A22A0CB9580020607F /* testEmail.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = testEmail.txt; path = "/Users/anferneeviduya/Desktop/CS SP23/email/email/../../../../Library/Developer/Xcode/DerivedData/email-dykpjkjnebxnxdgvpwfhzjjsozcu/Build/Products/Debug/testEmail.txt"; sourceTree = "<absolute>"; };
+		0ECDA1A22A0CB9580020607F /* testEmail.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = testEmail.txt; path = "/Users/anferneeviduya/Library/Developer/Xcode/DerivedData/email-dykpjkjnebxnxdgvpwfhzjjsozcu/Build/Products/Debug/testEmail.txt"; sourceTree = "<absolute>"; };
+		0ECDA1A42A1218FC0020607F /* email_functions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = email_functions.h; sourceTree = "<group>"; };
+		0ECDA1A52A1219680020607F /* email_functions.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = email_functions.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,8 @@
 		0ECDA1992A0CB4F30020607F /* email */ = {
 			isa = PBXGroup;
 			children = (
+				0ECDA1A52A1219680020607F /* email_functions.cpp */,
+				0ECDA1A42A1218FC0020607F /* email_functions.h */,
 				0ECDA19A2A0CB4F30020607F /* main.cpp */,
 				0ECDA1A22A0CB9580020607F /* testEmail.txt */,
 			);
@@ -121,6 +126,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ECDA1A62A1219680020607F /* email_functions.cpp in Sources */,
 				0ECDA19B2A0CB4F30020607F /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
